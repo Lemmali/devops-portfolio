@@ -1,0 +1,16 @@
+
+services:
+  web:
+    image: nginx
+    ports:
+      - "8085:80"
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret123
+      POSTGRES_DB: devops
+
+  redis:
+    image: redis:7
